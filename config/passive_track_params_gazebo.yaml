@@ -1,0 +1,29 @@
+options:
+  filter_gain: 0.2
+
+control:
+    dsGainPos: 6.0
+    lambda0Pos: 200.0
+    lambda1Pos: 200.0 
+    dsGainOri: 3.0
+    lambda0Ori: 20.0
+    lambda1Ori: 20.0
+
+target:
+    iiwa1:
+      pos: [0.55, -0.2, 0.4]
+      quat: [0.707, -0.707, 0.0, 0.0]
+    iiwa2:
+      pos: [0.55, 0.2, 0.4]
+      quat: [-0.707, -0.707, 0.0, 0.0]
+
+
+
+
+    # iiwa1:
+    #   pos: [0.05, -0.64, 0.2]
+    #   quat: [0.707, 0.0, 0.707, 0.0]
+
+    # iiwa2:
+    #   pos: [0.3, -0.62, 0.2]
+    #   quat: [-0.707, 0.0, 0.707, 0.0]
