@@ -1,0 +1,34 @@
+options:
+  filter_gain: 0.2
+
+control:
+    dsGainPos: 6.0
+    lambda0Pos: 200.0
+    lambda1Pos: 200.0 
+    dsGainOri: 3.0
+    lambda0Ori: 20.0
+    lambda1Ori: 20.0
+
+target:
+    iiwa1:
+      pos: [0.55, -0.2, 0.4]
+      quat: [0.707, -0.707, 0.0, 0.0]
+    iiwa2:
+      pos: [0.55, 0.2, 0.4]
+      quat: [-0.707, -0.707, 0.0, 0.0]
+
+
+# options:
+#   filter_gain: 0.2
+
+# control:
+#     dsGainPos: 5.0
+#     lambda0Pos: 20.0
+#     lambda1Pos: 10.0
+#     dsGainOri: 3.0
+#     lambda0Ori: 5.0
+#     lambda1Ori: 2.5
+
+# target:
+#     pos: [0.3, -0.2, 0.5]
+#     quat: [0.7071068, -0.7071068 , 0.0,  0.0]

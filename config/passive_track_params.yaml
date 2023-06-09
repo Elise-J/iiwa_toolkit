@@ -10,5 +10,6 @@ control:
     lambda1Ori: 2.5
 
 target:
+  iiwa:
     pos: [0.3, -0.2, 0.5]
     quat: [0.7071068, -0.7071068 , 0.0,  0.0]

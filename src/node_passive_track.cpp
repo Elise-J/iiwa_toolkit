@@ -67,6 +67,18 @@ class IiwaRosMaster
     ~IiwaRosMaster(){}
 
     bool init(){
+        std::string ns = _n.getNamespace();
+        std::string robot_name;
+        if (ns == "/") {
+            robot_name = "iiwa";
+            ns = "/"+robot_name;
+        } else if(ns.substr(0,1)=="/") {
+            robot_name = ns.substr(1,ns.size()-1); 
+        } else{
+            robot_name = ns;
+            ns = "/"+robot_name;
+        }
+        std::cout << "the namespace is: " + ns << " robot name is " << robot_name << std::endl;
         
         _feedback.jnt_position.setZero();
         _feedback.jnt_velocity.setZero();
@@ -75,25 +87,25 @@ class IiwaRosMaster
         command_plt.setZero();
         
         //!
-        _subRobotStates[0]= _n.subscribe<sensor_msgs::JointState> ("/iiwa/joint_states", 1,
+        _subRobotStates[0]= _n.subscribe<sensor_msgs::JointState> (ns+"/joint_states", 1,
                 boost::bind(&IiwaRosMaster::updateRobotStates,this,_1,0),ros::VoidPtr(),ros::TransportHints().reliable().tcpNoDelay());
         
         // _subOptitrack[0] = _n.subscribe<geometry_msgs::PoseStamped>("/vrpn_client_node/baseHand/pose", 1,
         //     boost::bind(&IiwaRosMaster::updateOptitrack,this,_1,0),ros::VoidPtr(),ros::TransportHints().reliable().tcpNoDelay());
-        _subControl[0] = _n.subscribe<geometry_msgs::Pose>("/passive_control/pos_quat", 1,
+        _subControl[0] = _n.subscribe<geometry_msgs::Pose>("/passive_control"+ns+"/pos_quat", 1,
             boost::bind(&IiwaRosMaster::updateControlPos,this,_1),ros::VoidPtr(),ros::TransportHints().reliable().tcpNoDelay());
-        _subControl[1] = _n.subscribe<geometry_msgs::Pose>("/passive_control/vel_quat", 1,
+        _subControl[1] = _n.subscribe<geometry_msgs::Pose>("/passive_control"+ns+"/vel_quat", 1,
             boost::bind(&IiwaRosMaster::updateControlVel,this,_1),ros::VoidPtr(),ros::TransportHints().reliable().tcpNoDelay());
 
-        // _TrqCmdPublisher = _n.advertise<std_msgs::Float64MultiArray>("/iiwa/TorqueController/command",1);
-        _JntPosCmdPublisher = _n.advertise<std_msgs::Float64MultiArray>("/iiwa/PositionController/command",1);
-        _EEPosePublisher = _n.advertise<geometry_msgs::Pose>("/iiwa/ee_info/Pose",1);
-        _EEVelPublisher = _n.advertise<geometry_msgs::Twist>("/iiwa/ee_info/Vel",1);
-        _InertiaPublisher = _n.advertise<geometry_msgs::Inertia>("/iiwa/Inertia/taskPos", 1);
+        // _TrqCmdPublisher = _n.advertise<std_msgs::Float64MultiArray>("ns+"/TorqueController/command",1);
+        _JntPosCmdPublisher = _n.advertise<std_msgs::Float64MultiArray>(ns+"/PositionController/command",1);
+        _EEPosePublisher = _n.advertise<geometry_msgs::Pose>(ns+"/ee_info/Pose",1);
+        _EEVelPublisher = _n.advertise<geometry_msgs::Twist>(ns+"/ee_info/Vel",1);
+        _InertiaPublisher = _n.advertise<geometry_msgs::Inertia>(ns+"/Inertia/taskPos", 1);
 
         // Get the URDF XML from the parameter server
         std::string urdf_string, full_param;
-        std::string robot_description = "robot_description";
+        std::string robot_description = ns+"/robot_description";
         std::string end_effector;
         // gets the location of the robot description on the parameter server
         if (!_n.searchParam(robot_description, full_param)) {
@@ -111,7 +123,7 @@ class IiwaRosMaster
         ROS_INFO_STREAM_NAMED("Controller", "Received urdf from param server, parsing...");
 
         // Get the end-effector
-        _n.param<std::string>("params/end_effector", end_effector, "iiwa_link_ee");
+        _n.param<std::string>("params/end_effector", end_effector, robot_name+"_link_ee");
         // Initialize iiwa tools
         
         
@@ -138,8 +150,8 @@ class IiwaRosMaster
         des_quat[0] = (std::cos(angle0/2));
         des_quat.segment(1,3) = (std::sin(angle0/2))* Eigen::Vector3d::UnitY();
         
-        while(!_n.getParam("target/pos",dpos)){ROS_INFO("Wating For the Parameter target_pos");}
-        while(!_n.getParam("target/quat",dquat)){ROS_INFO("Wating For the Parameter target_pos");}
+        while(!_n.getParam("target"+ns+"/pos",dpos)){ROS_INFO("Wating For the Parameter target_pos");}
+        while(!_n.getParam("target"+ns+"/quat",dquat)){ROS_INFO("Wating For the Parameter target_pos");}
         for (size_t i = 0; i < des_pos.size(); i++)
             des_pos(i) = dpos[i];
         for (size_t i = 0; i < des_quat.size(); i++)
@@ -161,7 +173,7 @@ class IiwaRosMaster
         _controller->set_ori_gains(ds_gain_ori,lambda0_ori,lambda1_ori);
         
         // plotting
-        _plotPublisher = _n.advertise<std_msgs::Float64MultiArray>("/iiwa/plotvar",1);
+        _plotPublisher = _n.advertise<std_msgs::Float64MultiArray>(ns+"/plotvar",1);
         
         // dynamic configure:
         _dynRecCallback = boost::bind(&IiwaRosMaster::param_cfg_callback,this,_1,_2);
