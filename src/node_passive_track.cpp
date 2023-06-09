@@ -68,13 +68,16 @@ class IiwaRosMaster
     bool init(){
         std::string ns = _n.getNamespace();
         std::string robot_name;
-        if(ns.substr(0,1)=="/")
+        if (ns == "/") {
+            robot_name = "iiwa";
+            ns = "/"+robot_name;
+        } else if(ns.substr(0,1)=="/") {
             robot_name = ns.substr(1,ns.size()-1); 
-        else{
+        } else{
             robot_name = ns;
             ns = "/"+robot_name;
         }
-        std::cout << "the namespace is: " + ns << std::endl;
+        std::cout << "the namespace is: " + ns << " robot name is " << robot_name << std::endl;
         
         _feedback.jnt_position.setZero();
         _feedback.jnt_velocity.setZero();
