@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcpp_passive_control.a  CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o
+/usr/bin/ranlib libcpp_passive_control.a
