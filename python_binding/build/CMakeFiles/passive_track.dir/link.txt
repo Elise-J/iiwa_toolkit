@@ -1,1 +1,0 @@
-/usr/bin/c++   -O3  -rdynamic CMakeFiles/passive_track.dir/src/node_passive_track.cpp.o  -o passive_track  -Wl,-rpath,/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build libcpp_passive_control.so 

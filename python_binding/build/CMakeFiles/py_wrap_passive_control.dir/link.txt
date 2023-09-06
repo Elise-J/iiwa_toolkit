@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -O3 -flto -shared  -o py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o  -Wl,-rpath,/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build libcpp_passive_control.so -lRBDyn -lmc_rbdyn_urdf 

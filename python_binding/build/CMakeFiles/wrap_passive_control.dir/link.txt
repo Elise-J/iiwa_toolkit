@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -flto -shared  -o wrap_passive_control.cpython-38-x86_64-linux-gnu.so CMakeFiles/wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o  -Wl,-rpath,/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build libpython_binding_iiwa_toolkit.so 
