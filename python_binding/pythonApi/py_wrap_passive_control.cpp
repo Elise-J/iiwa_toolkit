@@ -1,5 +1,7 @@
 
 #include "../pybind11/include/pybind11/pybind11.h"
+#include "../pybind11/include/pybind11/eigen.h"
+
 
 #include "../include/passive_control.h"
 #include <string>
