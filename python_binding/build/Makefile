@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /home/ros/ros_ws/src/iiwa_toolkit/python_binding/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -136,32 +182,86 @@ cpp_passive_control/fast:
 	$(MAKE) -f CMakeFiles/cpp_passive_control.dir/build.make CMakeFiles/cpp_passive_control.dir/build
 .PHONY : cpp_passive_control/fast
 
-pythonApi/wrap_passive_control.o: pythonApi/wrap_passive_control.cpp.o
+include/Utils.o: include/Utils.cpp.o
 
-.PHONY : pythonApi/wrap_passive_control.o
+.PHONY : include/Utils.o
 
 # target to build an object file
-pythonApi/wrap_passive_control.cpp.o:
-	$(MAKE) -f CMakeFiles/py_wrap_passive_control.dir/build.make CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o
-.PHONY : pythonApi/wrap_passive_control.cpp.o
+include/Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_passive_control.dir/build.make CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o
+.PHONY : include/Utils.cpp.o
 
-pythonApi/wrap_passive_control.i: pythonApi/wrap_passive_control.cpp.i
+include/Utils.i: include/Utils.cpp.i
 
-.PHONY : pythonApi/wrap_passive_control.i
+.PHONY : include/Utils.i
 
 # target to preprocess a source file
-pythonApi/wrap_passive_control.cpp.i:
-	$(MAKE) -f CMakeFiles/py_wrap_passive_control.dir/build.make CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.i
-.PHONY : pythonApi/wrap_passive_control.cpp.i
+include/Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_passive_control.dir/build.make CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.i
+.PHONY : include/Utils.cpp.i
 
-pythonApi/wrap_passive_control.s: pythonApi/wrap_passive_control.cpp.s
+include/Utils.s: include/Utils.cpp.s
 
-.PHONY : pythonApi/wrap_passive_control.s
+.PHONY : include/Utils.s
 
 # target to generate assembly for a file
-pythonApi/wrap_passive_control.cpp.s:
-	$(MAKE) -f CMakeFiles/py_wrap_passive_control.dir/build.make CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.s
-.PHONY : pythonApi/wrap_passive_control.cpp.s
+include/Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_passive_control.dir/build.make CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.s
+.PHONY : include/Utils.cpp.s
+
+pythonApi/py_wrap_passive_control.o: pythonApi/py_wrap_passive_control.cpp.o
+
+.PHONY : pythonApi/py_wrap_passive_control.o
+
+# target to build an object file
+pythonApi/py_wrap_passive_control.cpp.o:
+	$(MAKE) -f CMakeFiles/py_wrap_passive_control.dir/build.make CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o
+.PHONY : pythonApi/py_wrap_passive_control.cpp.o
+
+pythonApi/py_wrap_passive_control.i: pythonApi/py_wrap_passive_control.cpp.i
+
+.PHONY : pythonApi/py_wrap_passive_control.i
+
+# target to preprocess a source file
+pythonApi/py_wrap_passive_control.cpp.i:
+	$(MAKE) -f CMakeFiles/py_wrap_passive_control.dir/build.make CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.i
+.PHONY : pythonApi/py_wrap_passive_control.cpp.i
+
+pythonApi/py_wrap_passive_control.s: pythonApi/py_wrap_passive_control.cpp.s
+
+.PHONY : pythonApi/py_wrap_passive_control.s
+
+# target to generate assembly for a file
+pythonApi/py_wrap_passive_control.cpp.s:
+	$(MAKE) -f CMakeFiles/py_wrap_passive_control.dir/build.make CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.s
+.PHONY : pythonApi/py_wrap_passive_control.cpp.s
+
+src/iiwa_tools.o: src/iiwa_tools.cpp.o
+
+.PHONY : src/iiwa_tools.o
+
+# target to build an object file
+src/iiwa_tools.cpp.o:
+	$(MAKE) -f CMakeFiles/cpp_passive_control.dir/build.make CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o
+.PHONY : src/iiwa_tools.cpp.o
+
+src/iiwa_tools.i: src/iiwa_tools.cpp.i
+
+.PHONY : src/iiwa_tools.i
+
+# target to preprocess a source file
+src/iiwa_tools.cpp.i:
+	$(MAKE) -f CMakeFiles/cpp_passive_control.dir/build.make CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.i
+.PHONY : src/iiwa_tools.cpp.i
+
+src/iiwa_tools.s: src/iiwa_tools.cpp.s
+
+.PHONY : src/iiwa_tools.s
+
+# target to generate assembly for a file
+src/iiwa_tools.cpp.s:
+	$(MAKE) -f CMakeFiles/cpp_passive_control.dir/build.make CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.s
+.PHONY : src/iiwa_tools.cpp.s
 
 src/passive_control.o: src/passive_control.cpp.o
 
@@ -196,13 +296,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... py_wrap_passive_control"
 	@echo "... cpp_passive_control"
-	@echo "... pythonApi/wrap_passive_control.o"
-	@echo "... pythonApi/wrap_passive_control.i"
-	@echo "... pythonApi/wrap_passive_control.s"
+	@echo "... include/Utils.o"
+	@echo "... include/Utils.i"
+	@echo "... include/Utils.s"
+	@echo "... pythonApi/py_wrap_passive_control.o"
+	@echo "... pythonApi/py_wrap_passive_control.i"
+	@echo "... pythonApi/py_wrap_passive_control.s"
+	@echo "... src/iiwa_tools.o"
+	@echo "... src/iiwa_tools.i"
+	@echo "... src/iiwa_tools.s"
 	@echo "... src/passive_control.o"
 	@echo "... src/passive_control.i"
 	@echo "... src/passive_control.s"

@@ -57,9 +57,22 @@ include CMakeFiles/cpp_passive_control.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cpp_passive_control.dir/flags.make
 
+CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o: CMakeFiles/cpp_passive_control.dir/flags.make
+CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o: ../include/Utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o -c /home/ros/ros_ws/src/iiwa_toolkit/python_binding/include/Utils.cpp
+
+CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/ros_ws/src/iiwa_toolkit/python_binding/include/Utils.cpp > CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.i
+
+CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/ros_ws/src/iiwa_toolkit/python_binding/include/Utils.cpp -o CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.s
+
 CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o: CMakeFiles/cpp_passive_control.dir/flags.make
 CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o: ../src/passive_control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o -c /home/ros/ros_ws/src/iiwa_toolkit/python_binding/src/passive_control.cpp
 
 CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.i: cmake_force
@@ -70,22 +83,38 @@ CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/ros_ws/src/iiwa_toolkit/python_binding/src/passive_control.cpp -o CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.s
 
+CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o: CMakeFiles/cpp_passive_control.dir/flags.make
+CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o: ../src/iiwa_tools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o -c /home/ros/ros_ws/src/iiwa_toolkit/python_binding/src/iiwa_tools.cpp
+
+CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/ros_ws/src/iiwa_toolkit/python_binding/src/iiwa_tools.cpp > CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.i
+
+CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/ros_ws/src/iiwa_toolkit/python_binding/src/iiwa_tools.cpp -o CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.s
+
 # Object files for target cpp_passive_control
 cpp_passive_control_OBJECTS = \
-"CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o"
+"CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o" \
+"CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o" \
+"CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o"
 
 # External object files for target cpp_passive_control
 cpp_passive_control_EXTERNAL_OBJECTS =
 
-libcpp_passive_control.a: CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o
-libcpp_passive_control.a: CMakeFiles/cpp_passive_control.dir/build.make
-libcpp_passive_control.a: CMakeFiles/cpp_passive_control.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcpp_passive_control.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/cpp_passive_control.dir/cmake_clean_target.cmake
+libcpp_passive_control.so: CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o
+libcpp_passive_control.so: CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o
+libcpp_passive_control.so: CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o
+libcpp_passive_control.so: CMakeFiles/cpp_passive_control.dir/build.make
+libcpp_passive_control.so: CMakeFiles/cpp_passive_control.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libcpp_passive_control.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpp_passive_control.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/cpp_passive_control.dir/build: libcpp_passive_control.a
+CMakeFiles/cpp_passive_control.dir/build: libcpp_passive_control.so
 
 .PHONY : CMakeFiles/cpp_passive_control.dir/build
 

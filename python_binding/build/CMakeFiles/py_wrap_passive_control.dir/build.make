@@ -57,60 +57,33 @@ include CMakeFiles/py_wrap_passive_control.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/py_wrap_passive_control.dir/flags.make
 
-CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o: CMakeFiles/py_wrap_passive_control.dir/flags.make
-CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o: ../pythonApi/wrap_passive_control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o -c /home/ros/ros_ws/src/iiwa_toolkit/python_binding/pythonApi/wrap_passive_control.cpp
+CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o: CMakeFiles/py_wrap_passive_control.dir/flags.make
+CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o: ../pythonApi/py_wrap_passive_control.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o -c /home/ros/ros_ws/src/iiwa_toolkit/python_binding/pythonApi/py_wrap_passive_control.cpp
 
-CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/ros_ws/src/iiwa_toolkit/python_binding/pythonApi/wrap_passive_control.cpp > CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.i
+CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/ros_ws/src/iiwa_toolkit/python_binding/pythonApi/py_wrap_passive_control.cpp > CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.i
 
-CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/ros_ws/src/iiwa_toolkit/python_binding/pythonApi/wrap_passive_control.cpp -o CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.s
+CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/ros_ws/src/iiwa_toolkit/python_binding/pythonApi/py_wrap_passive_control.cpp -o CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.s
 
 # Object files for target py_wrap_passive_control
 py_wrap_passive_control_OBJECTS = \
-"CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o"
+"CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o"
 
 # External object files for target py_wrap_passive_control
 py_wrap_passive_control_EXTERNAL_OBJECTS =
 
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o
+py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o
 py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: CMakeFiles/py_wrap_passive_control.dir/build.make
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: libcpp_passive_control.a
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/Body.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/CoM.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/Coriolis.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/EulerIntegration.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/FA.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/FD.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/FK.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/FV.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/ID.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/IDIM.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/IK.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/IS.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/Jacobian.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/Joint.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/Momentum.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/MultiBody.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/MultiBodyConfig.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/MultiBodyGraph.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/NumericalIntegration.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/VisServo.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/RBDyn/ZMP.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/mc_rbdyn_urdf/api.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: /usr/local/include/mc_rbdyn_urdf/urdf.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: ../include/iiwa_tools.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: ../include/thirdparty/Utils.h
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: ../include/thirdparty/Utils.cpp
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: ../include/cvxgen/iiwa_ik_cvxgen.hpp
-py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: ../src/iiwa_tools.cpp
+py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: libcpp_passive_control.so
 py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so: CMakeFiles/py_wrap_passive_control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/py_wrap_passive_control.dir/link.txt --verbose=$(VERBOSE)
+	/usr/bin/strip /home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so
 
 # Rule to build all files generated by this target.
 CMakeFiles/py_wrap_passive_control.dir/build: py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so

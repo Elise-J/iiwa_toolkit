@@ -1,2 +1,1 @@
-/usr/bin/ar qc libcpp_passive_control.a  CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o
-/usr/bin/ranlib libcpp_passive_control.a
+/usr/bin/c++ -fPIC  -O3  -shared -Wl,-soname,libcpp_passive_control.so -o libcpp_passive_control.so CMakeFiles/cpp_passive_control.dir/include/Utils.cpp.o CMakeFiles/cpp_passive_control.dir/src/passive_control.cpp.o CMakeFiles/cpp_passive_control.dir/src/iiwa_tools.cpp.o  -lRBDyn -lmc_rbdyn_urdf 

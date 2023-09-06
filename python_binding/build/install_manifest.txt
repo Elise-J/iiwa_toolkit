@@ -1,0 +1,6 @@
+/usr/local/include/cpp_passive_control/passive_control.h
+/usr/local/include/cpp_passive_control/iiwa_tools.h
+/usr/local/include/cpp_passive_control/Utils.h
+/usr/local/include/cpp_passive_control/Utils.cpp
+/usr/local/include/cpp_passive_control/iiwa_ik_cvxgen.hpp
+/usr/local/lib/libcpp_passive_control.so

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ros/ros_ws/src/iiwa_toolkit/devel/setup.sh

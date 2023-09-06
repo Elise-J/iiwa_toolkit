@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/py_wrap_passive_control.dir/pythonApi/wrap_passive_control.cpp.o"
+  "CMakeFiles/py_wrap_passive_control.dir/pythonApi/py_wrap_passive_control.cpp.o"
   "py_wrap_passive_control.cpython-38-x86_64-linux-gnu.so"
   "py_wrap_passive_control.pdb"
 )

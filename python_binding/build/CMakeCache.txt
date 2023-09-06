@@ -318,8 +318,23 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 //Path to a library.
 PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.8.so
 
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=/home/ros/ros_ws/src/iiwa_toolkit/python_binding
+
+//The directory containing a CMake configuration file for RBDYN.
+RBDYN_DIR:PATH=RBDYN_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for RBDyn-dev.
+RBDyn-dev_DIR:PATH=RBDyn-dev_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for RBDyn.
 RBDyn_DIR:PATH=/usr/local/lib/cmake/RBDyn
+
+//The directory containing a CMake configuration file for Rbdyn.
+Rbdyn_DIR:PATH=Rbdyn_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for SpaceVecAlg.
 SpaceVecAlg_DIR:PATH=/usr/local/lib/cmake/SpaceVecAlg
@@ -337,7 +352,7 @@ boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
 boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0
 
 //Dependencies for the target
-cpp_passive_control_LIB_DEPENDS:STATIC=general;/usr/local/include/RBDyn/Body.h;general;/usr/local/include/RBDyn/CoM.h;general;/usr/local/include/RBDyn/Coriolis.h;general;/usr/local/include/RBDyn/EulerIntegration.h;general;/usr/local/include/RBDyn/FA.h;general;/usr/local/include/RBDyn/FD.h;general;/usr/local/include/RBDyn/FK.h;general;/usr/local/include/RBDyn/FV.h;general;/usr/local/include/RBDyn/ID.h;general;/usr/local/include/RBDyn/IDIM.h;general;/usr/local/include/RBDyn/IK.h;general;/usr/local/include/RBDyn/IS.h;general;/usr/local/include/RBDyn/Jacobian.h;general;/usr/local/include/RBDyn/Joint.h;general;/usr/local/include/RBDyn/Momentum.h;general;/usr/local/include/RBDyn/MultiBody.h;general;/usr/local/include/RBDyn/MultiBodyConfig.h;general;/usr/local/include/RBDyn/MultiBodyGraph.h;general;/usr/local/include/RBDyn/NumericalIntegration.h;general;/usr/local/include/RBDyn/VisServo.h;general;/usr/local/include/RBDyn/ZMP.h;general;/usr/local/include/mc_rbdyn_urdf/api.h;general;/usr/local/include/mc_rbdyn_urdf/urdf.h;general;/home/ros/ros_ws/src/iiwa_toolkit/python_binding/include/iiwa_tools.h;general;/home/ros/ros_ws/src/iiwa_toolkit/python_binding/include/thirdparty/Utils.h;general;/home/ros/ros_ws/src/iiwa_toolkit/python_binding/include/thirdparty/Utils.cpp;general;/home/ros/ros_ws/src/iiwa_toolkit/python_binding/include/cvxgen/iiwa_ik_cvxgen.hpp;general;/home/ros/ros_ws/src/iiwa_toolkit/python_binding/src/iiwa_tools.cpp;
+cpp_passive_control_LIB_DEPENDS:STATIC=general;RBDyn;general;mc_rbdyn_urdf;
 
 //The directory containing a CMake configuration file for mc_rbdyn_urdf.
 mc_rbdyn_urdf_DIR:PATH=/usr/local/lib/cmake/mc_rbdyn_urdf

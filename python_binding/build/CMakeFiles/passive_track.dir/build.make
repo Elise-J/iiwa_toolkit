@@ -79,35 +79,7 @@ passive_track_EXTERNAL_OBJECTS =
 
 passive_track: CMakeFiles/passive_track.dir/src/node_passive_track.cpp.o
 passive_track: CMakeFiles/passive_track.dir/build.make
-passive_track: libcpp_passive_control.a
-passive_track: /usr/local/include/RBDyn/Body.h
-passive_track: /usr/local/include/RBDyn/CoM.h
-passive_track: /usr/local/include/RBDyn/Coriolis.h
-passive_track: /usr/local/include/RBDyn/EulerIntegration.h
-passive_track: /usr/local/include/RBDyn/FA.h
-passive_track: /usr/local/include/RBDyn/FD.h
-passive_track: /usr/local/include/RBDyn/FK.h
-passive_track: /usr/local/include/RBDyn/FV.h
-passive_track: /usr/local/include/RBDyn/ID.h
-passive_track: /usr/local/include/RBDyn/IDIM.h
-passive_track: /usr/local/include/RBDyn/IK.h
-passive_track: /usr/local/include/RBDyn/IS.h
-passive_track: /usr/local/include/RBDyn/Jacobian.h
-passive_track: /usr/local/include/RBDyn/Joint.h
-passive_track: /usr/local/include/RBDyn/Momentum.h
-passive_track: /usr/local/include/RBDyn/MultiBody.h
-passive_track: /usr/local/include/RBDyn/MultiBodyConfig.h
-passive_track: /usr/local/include/RBDyn/MultiBodyGraph.h
-passive_track: /usr/local/include/RBDyn/NumericalIntegration.h
-passive_track: /usr/local/include/RBDyn/VisServo.h
-passive_track: /usr/local/include/RBDyn/ZMP.h
-passive_track: /usr/local/include/mc_rbdyn_urdf/api.h
-passive_track: /usr/local/include/mc_rbdyn_urdf/urdf.h
-passive_track: ../include/iiwa_tools.h
-passive_track: ../include/thirdparty/Utils.h
-passive_track: ../include/thirdparty/Utils.cpp
-passive_track: ../include/cvxgen/iiwa_ik_cvxgen.hpp
-passive_track: ../src/iiwa_tools.cpp
+passive_track: libcpp_passive_control.so
 passive_track: CMakeFiles/passive_track.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/ros_ws/src/iiwa_toolkit/python_binding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable passive_track"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/passive_track.dir/link.txt --verbose=$(VERBOSE)

@@ -32,7 +32,7 @@ void PassiveDS::set_damping_eigval(const double& lam0, const double& lam1){
         damping_eigval(1,1) = eigVal1;
         damping_eigval(2,2) = eigVal1;
     }else{
-        std::cerr << "wrong values for the eigenvalues"<<"\n";
+        std::cout << "wrong values for the eigenvalues"<<"\n";
     }
 }
 void PassiveDS::updateDampingMatrix(const Eigen::Vector3d& ref_vel){ 
@@ -240,7 +240,7 @@ void PassiveControl::set_null_pos(const Eigen::VectorXd& nullPosition){
         _robot.nulljnt_position = nullPosition;
     }else{
         // ROS_ERROR("wrong size for the null joint position");
-        std::cerr << "wrong size for the null joint position"<<"\n";
+        std::cout << "wrong size for the null joint position"<<"\n";
     }
 }
 

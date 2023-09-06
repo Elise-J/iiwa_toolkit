@@ -18,7 +18,7 @@
 //|
 #include <Eigen/Dense>
 
-#include "../include/passive_control.h"
+#include "cpp_passive_control/passive_control.h"
 
 #define No_JOINTS 7
 #define No_Robots 1

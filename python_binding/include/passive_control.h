@@ -30,7 +30,7 @@
 #include <Eigen/Dense>
 #include "iiwa_tools.h"
 #include <RBDyn/FD.h>
-#include "thirdparty/Utils.h"
+#include "Utils.h"
 #include <iostream>
 
 
