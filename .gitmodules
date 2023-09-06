@@ -1,4 +1,4 @@
 [submodule "python_binding/pybind11"]
 	path = python_binding/pybind11
 	url = ../../pybind/pybind11
-	branch = feature_ns_inertial_control
+	branch = stable
