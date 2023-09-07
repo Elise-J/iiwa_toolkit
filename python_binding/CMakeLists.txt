@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 project(wrap_passive_control)
 
 set(PY_PROJECT py_passive_inertial_control)
-set(CPP_LIBRARY cpp_passive_control)
+set(CPP_LIBRARY cpp_passive_inertial_control)
 
 
 find_package(pybind11 REQUIRED)
