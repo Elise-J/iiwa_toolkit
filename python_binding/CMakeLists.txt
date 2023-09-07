@@ -7,7 +7,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
 project(wrap_passive_control)
 
-set(PY_PROJECT py_wrap_passive_control)
+set(PY_PROJECT py_passive_inertial_control)
 set(CPP_LIBRARY cpp_passive_control)
 
 
@@ -102,9 +102,9 @@ install(TARGETS ${CPP_LIBRARY}
 
 add_subdirectory(pybind11)
 
-# add_library(${PY_PROJECT} MODULE pythonApi/py_wrap_passive_control.cpp)
+# add_library(${PY_PROJECT} MODULE pythonApi/py_passive_inertial_control.cpp)
 
-pybind11_add_module(${PY_PROJECT} pythonApi/py_wrap_passive_control.cpp)
+pybind11_add_module(${PY_PROJECT} pythonApi/py_passive_inertial_control.cpp)
 
 target_include_directories(${PY_PROJECT} PUBLIC ${RBDyn_INCLUDE_DIRS} ${mc_rbdyn_urdf_INCLUDE_DIRS})
 

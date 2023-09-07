@@ -9,7 +9,7 @@
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(py_wrap_passive_control, m)
+PYBIND11_MODULE(py_passive_inertial_control, m)
 {
     py::class_<PassiveControl>(m, "PassiveControl")
     .def(py::init<const std::string &, const std::string &>()) // constructor
